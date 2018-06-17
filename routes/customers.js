@@ -28,11 +28,11 @@ router.get('/get_customer/:id/', function(req, res, next) {
 });
 
 router.post('/add/', function(req, res, next) {
-    addCustomers(req.body, res);
+    addCustomers(req.body.data, res);
 });
 
 router.put('/update/', function(req, res, next) {
-    updateCustomer(req.body, res);
+    updateCustomer(req.body.data, res);
 });
 
 router.delete('/remove/', function(req, res) {
