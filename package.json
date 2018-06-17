@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/prateekdev92/spa-nodejs-mongo-backend#readme",
   "dependencies": {
+    "cookie-parser": "^1.4.3",
     "express": "^4.16.3",
     "jade": "^1.11.0",
     "mongoose": "^5.1.5",
