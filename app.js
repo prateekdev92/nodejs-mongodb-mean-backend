@@ -10,6 +10,17 @@ var app = express();
 
 app.listen(3060, () => console.log('Example app listening on port 3060!'))
 
+app.use(function (req, res, next) {
+    res.header('Access-Control-Allow-Origin', "*");
+    res.header('Access-Control-Allow-Methods', "GET, POST, OPTIONS, PUT, DELETE");
+    res.header('Access-Control-Allow-Headers', "Accept,Authorization,Content-Type,Origin,X-Requested-With,Content-Length");
+    if ('OPTIONS' == req.method) {
+      res.send(200);
+    } else {
+      next();
+    }
+});
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
